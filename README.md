@@ -13,3 +13,6 @@ Luca Kurotaki - Programação Internet, Arquitetura de Computadores, BD II, SO, 
 
 # Link Para Protótipo do Projeto
 https://www.figma.com/file/oZI2Yupsz2UVKjESoGkxqQ/TheServices_IFPI?node-id=0%3A1
+
+# Técnicas de elicitação de requisitos:
+
