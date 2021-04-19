@@ -19,4 +19,5 @@ https://www.figma.com/file/oZI2Yupsz2UVKjESoGkxqQ/TheServices_IFPI?node-id=0%3A1
 - Foram feitas também entrevistas não estruturadas.
 
 # Link para Product Backlog
+Link do trello:
 https://trello.com/b/XkYiMPJP/theservicesuserstory
