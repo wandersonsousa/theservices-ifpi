@@ -15,4 +15,5 @@ Luca Kurotaki - Programação Internet, Arquitetura de Computadores, BD II, SO, 
 https://www.figma.com/file/oZI2Yupsz2UVKjESoGkxqQ/TheServices_IFPI?node-id=0%3A1
 
 # Técnicas de elicitação de requisitos:
-
+- Prototipação, foram prototipadas algumas telas para que pudessem ser representados alguns aspectos do software e assim obter um melhor entendimento dos requisitos do sistema.
+- Foram feitas também entrevistas não estruturadas.
