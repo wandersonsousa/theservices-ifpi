@@ -17,3 +17,6 @@ https://www.figma.com/file/oZI2Yupsz2UVKjESoGkxqQ/TheServices_IFPI?node-id=0%3A1
 # Técnicas de elicitação de requisitos:
 - Prototipação, foram prototipadas algumas telas para que pudessem ser representados alguns aspectos do software e assim obter um melhor entendimento dos requisitos do sistema.
 - Foram feitas também entrevistas não estruturadas.
+
+# Link para Product Backlog
+https://trello.com/c/Rvzs2aKL/7-usu%C3%A1rio-n%C3%A3o-pode-comprar-se-n%C3%A3o-estiver-logado-no-sistema
