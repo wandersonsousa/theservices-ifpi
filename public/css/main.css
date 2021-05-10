@@ -1,0 +1,36 @@
+html, body {
+    background:#f9f9f9;
+}
+.menu-container {
+    background-color:#fff;
+    padding-left: 100px;
+    padding-right: 100px;
+    z-index: 1;
+}
+
+.menu .navbar-brand{
+    color: #16DF2D;
+    font-size: 1.6em;
+    font-family: 'Oswald', sans-serif;
+}
+.menu .navbar-brand:hover{
+    color: #16DF2D;
+}
+
+.content {
+    width: 100%;
+    margin-top: 200px;
+}
+
+.footer {
+    width: 100%;
+    padding: 40px;
+    background-color: #22577A;
+    color: #fff;
+}
+
+.menu-container{
+    display: flex ;
+    justify-content: space-around;
+    flex-direction: row ;
+}
