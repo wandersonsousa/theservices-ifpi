@@ -18,6 +18,17 @@ class Service extends BaseController
 		echo view('templates/footer');
 	}
 
+	public function listAll()
+	{
+		$data = array();
+		$serviceModel = new ServiceViewModel();
+		$data['services'] = $serviceModel->findAll();
+		
+		echo view('templates/header');
+		echo view('pages/home', $data);
+		echo view('templates/footer');
+	}
+
 	public function newService()
 	{
 		$data = array();
@@ -53,7 +64,7 @@ class Service extends BaseController
 				];
 
 				$serviceModel->insert($newService);
-
+				session()->setFlashdata('success', 'serviço publicado com sucesso.');
 				return redirect()->to('/');
 			}
 		}
@@ -61,6 +72,20 @@ class Service extends BaseController
 		echo view('templates/header');
 		echo view('pages/newService', $data);
 		echo view('templates/footer');
+	}
+
+	public function delete(){
+		$data = array();
+		if ($this->request->getMethod() == 'post') {
+			$serviceModel = new ServiceModel();
+			$serviceModel->delete($this->request->getPost('id'));
+
+			session()->setFlashdata('success', 'serviço excluido com sucesso.');
+			return redirect()->to('/');
+		}else{
+			return redirect()->to('/');
+		}
+
 	}
 
 	public function updateService($id)

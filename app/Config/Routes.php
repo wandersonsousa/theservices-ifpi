@@ -40,6 +40,8 @@ $routes->match(['get', 'post'], 'novo-servico', 'Service::newService');
 
 $routes->match(['get', 'post'], 'atualizar-servico/(:num)', 'Service::updateService/$1');
 $routes->match(['get', 'post'], 'atualizar-perfil/', 'User::update');
+						  
+$routes->match(['post'], 'deletar-servico', 'Service::delete');
 
 $routes->get('servico/(:num)', 'Service::index/$1');
 $routes->get('meus-servicos', 'Service::myServices');
