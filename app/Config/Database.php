@@ -37,7 +37,7 @@ class Database extends Config
 		'username' => 'ba15f3245e1ec5',
 		'password' => '6765976a',
 		'database' => 'heroku_6180a55274710ac',
-		'DBDriver' => 'MySQLi',
+		'DBDriver' => 'pdo',
 		'DBPrefix' => '',
 		'pConnect' => false,
 		'DBDebug'  => (ENVIRONMENT !== 'production'),
