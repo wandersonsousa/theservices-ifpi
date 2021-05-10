@@ -32,7 +32,7 @@ class Database extends Config
 	 */
 
 	public $default = [
-		'DSN'      => 'mysql://ba15f3245e1ec5:6765976a@us-cdbr-east-03.cleardb.com/heroku_6180a55274710ac?reconnect=true',
+		'DSN'      => '',
 		'hostname' => 'us-cdbr-east-03.cleardb.com',
 		'username' => 'ba15f3245e1ec5',
 		'password' => '6765976a',
