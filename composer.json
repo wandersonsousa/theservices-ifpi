@@ -1,7 +1,7 @@
 {
 	"name": "codeigniter4/codeigniter4",
 	"type": "project",
-	"description": "The CodeIgniter framework v4",
+	"description": "The services",
 	"homepage": "https://codeigniter.com",
 	"license": "MIT",
 	"require": {
