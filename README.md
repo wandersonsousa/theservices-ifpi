@@ -25,6 +25,8 @@ https://trello.com/b/XkYiMPJP/theservicesuserstory
 Link pdf: 
 https://drive.google.com/file/d/1geBxGBsgOQ4pErtNqtINrB4CBtO_QaY_/view?usp=sharing
 
+#TODO
+- fix images host
 
 # Usuário para login no sistema 
 - email: admin@admin.com
