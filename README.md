@@ -28,6 +28,13 @@ https://drive.google.com/file/d/1geBxGBsgOQ4pErtNqtINrB4CBtO_QaY_/view?usp=shari
 # TODO
 - fix images host
 
+# Funcionalidades com regras de negócio
+- Cadastro de serviços: cada usuário do sistema possuirá um limite de serviços que podem ser cadastrados, aqueles que quiserem cadastrar serviços acima do limite devem possuir uma licença de acesso premium ao sistema, na qual essa deve ser comprada pelo usuário.
+
+- Sistema de geolocalização: a partir do cep ou localização inserida pelo usuário no sistema, os serviços próximos oferecidos que deverão aparecer no site são aqueles do bairro em que o usuário está localizado.
+
+- Relatório de métricas: Entrega de relatório periodicamente a cada semana, o relatório será enviado como email para o vendedor cadastrado no sistema, contendo metrícas de acesso de seu serviço e suas vendas.
+
 # Usuário para login no sistema 
 - email: admin@admin.com
 - senha: 1234
