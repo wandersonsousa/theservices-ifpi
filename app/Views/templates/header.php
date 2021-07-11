@@ -29,7 +29,6 @@
                 <div class="drop-box">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span><?= session()->get("user_name") ?> </span><img src="<?= base_url(['img', 'bust_man.png']) ?>" width="35" width="35" alt="bust man">
                             </a>

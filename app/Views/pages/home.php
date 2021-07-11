@@ -1,5 +1,12 @@
 <!-- tag required for menu alignment -->
+
+
 <div class="content">
+<?php if (session()->getFlashdata('success')) : ?>
+    <div class="alert alert-success" role="alert">
+        <?=session()->getFlashdata('success')?>
+    </div>
+<?php endif; ?>
 
     <div class="text-center heading-title fancy-underline heading-bigger-nomargin left">
         <h1>Explore os serviços oferecidos em <span class="city">Teresina</span></h1>
@@ -18,7 +25,7 @@
                         <h5 class="card-title text-start"><a class="card-title-link fw-normal" href="<?= base_url(['servico', $service['id_service']]) ?>"><?= $service['service_name'] ?></a> </h5>
                     </div>
                 </div>
-                
+
                 <div class="card-bottom-info">
                     <div class="total-sales">
                         <i class="fas fa-shopping-cart"></i>

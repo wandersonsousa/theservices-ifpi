@@ -105,6 +105,7 @@ class User extends BaseController
         $data['validation'] = $this->validator;
         echo view('templates/header');
         echo view('pages/profileUpdate', $data);
+        echo view('templates/footer');
     }
 
     public function logout()

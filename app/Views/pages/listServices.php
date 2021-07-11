@@ -23,7 +23,7 @@
     </ul>
 
     <div class="modal" tabindex="-1" id="modal-delete">
-        <form id="form" action="<?= base_url(['deletar-servico']) ?>" role="form" method="post">
+        <form id="form" action="<?= base_url(['deletar-servico']) ?>" role="form" method="POST">
             <input type="hidden" name="id" id="id">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -36,7 +36,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-danger">Excluir</button>
+                        <button type="submit" class="btn btn-danger">Excluir</button>
                     </div>
                 </div>
             </div>
