@@ -11,7 +11,9 @@ class Home extends BaseController
 		$data = array();
 		$serviceModel = new ServiceViewModel();
 		$data['services'] = $serviceModel->findAll();
-		
+		if($this->request->getGet('report')){
+			session()->setFlashdata('info', 'O relatório semanal foi entregue.');
+		}
 		echo view('templates/header');
 		echo view('pages/home', $data);
 		echo view('templates/footer');

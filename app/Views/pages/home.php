@@ -12,6 +12,11 @@
         <?=session()->getFlashdata('fail')?>
     </div>
 <?php endif; ?>
+<?php if (session()->getFlashdata('info')) : ?>
+    <div class="alert alert-info" role="alert">
+        <?=session()->getFlashdata('info')?>
+    </div>
+<?php endif; ?>
 
 
     <div class="text-center heading-title fancy-underline heading-bigger-nomargin left">
