@@ -21,6 +21,7 @@ class Filters extends BaseConfig
 		'toolbar'  => DebugToolbar::class,
 		'honeypot' => Honeypot::class,
 		'auth' => \App\Filters\Auth::class,
+		'premium' => \App\Filters\Premium::class,
 		'permission' => \App\Filters\PermissionChecker::class,
 	];
 
@@ -32,7 +33,8 @@ class Filters extends BaseConfig
 	 */
 	public $globals = [
 		'before' => [
-			'auth' => ['except' => ['user/login', 'user/register', 'login', 'register']]
+			'auth' => ['except' => ['user/login', 'user/register', 'login', 'register']],
+
 			// 'honeypot',
 			// 'csrf',
 		],

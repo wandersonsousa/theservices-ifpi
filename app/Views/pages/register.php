@@ -20,11 +20,24 @@
                         <label for="email" class="form-label">Email</label>
                         <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
                     </div>
-
                     <div class="mb-3 text-center">
                         <label for="password" class="form-label">Senha</label>
                         <input type="password" name="password" class="form-control" id="password">
                     </div>
+
+
+                    <div class="mb-3 text-center">
+                        <label for="cep" class="form-label">CEP</label>
+                        <input type="cep" name="cep" class="form-control" id="cep" aria-describedby="cepHelp">
+                    </div>
+
+                    <div class="mb-3 text-center">
+                        <div class="form-check form-switch bg-warning">
+                            <input class="form-check-input" type="checkbox" id="is_premium" checked>
+                            <label class="form-check-label" for="is_premium" >Premium</label>
+                        </div>
+                    </div>
+
 
                     <div class="mb-3 text-center">
                         <button type="submit" class="btn btn-primary">Registrar</button>

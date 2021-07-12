@@ -21,6 +21,8 @@ class User extends BaseController
             $rules = [
                 "email" => "required|min_length[3]|max_length[50]|valid_email|is_unique[user.user_email]",
                 "name" => "required|min_length[2]|max_length[50]",
+                'cep' => 'required|min_length[12]|string',
+                'is_premium' => 'permit_empty',
                 "password" => "required|min_length[4]|max_length[50]",
             ];
 
@@ -29,6 +31,8 @@ class User extends BaseController
                 $newUser = [
                     "user_name" => $this->request->getPost("name"),
                     "user_email" => $this->request->getPost("email"),
+                    'cep' => $this->request->getPost('cep'),
+                    'is_premium' => intval($this->request->getPost('is_premium')),
                     "user_password" => $this->request->getPost("password"),
                 ];
                 $userModel->insert($newUser);
@@ -57,7 +61,7 @@ class User extends BaseController
                 "user_email" => $this->request->getPost("email"),
                 "user_password" => $this->request->getPost("password"),
             ];
-
+            
             $user = $userModel->getUserByLogin($loginData);
             if ($user) {
                 $this->setLoggedUserSession($user);
@@ -120,6 +124,8 @@ class User extends BaseController
         $sessionData = [
             "user_name" => $userData["user_name"],
             "user_email" => $userData["user_email"],
+            "is_full" => $userData["is_full"],
+            "is_premium" => $userData["is_premium"],
             "logged_in" => true
         ];
         if (isset($userData["id_user"])) {

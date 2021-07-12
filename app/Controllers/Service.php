@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\ServiceViewModel;
 use App\Models\ServiceModel;
+use App\Models\UserModel;
 
 class Service extends BaseController
 {
@@ -23,7 +24,7 @@ class Service extends BaseController
 		$data = array();
 		$serviceModel = new ServiceViewModel();
 		$data['services'] = $serviceModel->findAll();
-		
+
 		echo view('templates/header');
 		echo view('pages/home', $data);
 		echo view('templates/footer');
@@ -33,6 +34,16 @@ class Service extends BaseController
 	{
 		$data = array();
 		helper(['form']);
+
+		$serviceModel = new ServiceModel();
+		$userModel = new UserModel();
+		if (!intval(session()->get('is_premium'))) {
+			$servicesCount = count($serviceModel->where('id_user', session()->get('user_id'))->findAll());
+			if ($servicesCount == 2) {
+				session()->setFlashdata('fail', 'limite de serviços publicados atingido');
+				return redirect()->to('/');
+			}
+		}
 
 		if ($this->request->getMethod() == 'post') {
 			$rules = [
@@ -48,8 +59,6 @@ class Service extends BaseController
 			];
 
 			if ($this->validate($rules)) {
-				$serviceModel = new ServiceModel();
-
 				$serviceImgFile = $this->request->getFile('service-img');
 				$newFileName = $serviceImgFile->getRandomName();
 				$serviceImgFile->move('uploads/img/services', $newFileName);
@@ -59,6 +68,7 @@ class Service extends BaseController
 					'service_name' => $this->request->getPost('name'),
 					'service_description' => $this->request->getPost('description'),
 					'service_price' => $this->request->getPost('price'),
+
 					'id_user' => $userId,
 					'service_img' => $newFileName
 				];
@@ -74,7 +84,8 @@ class Service extends BaseController
 		echo view('templates/footer');
 	}
 
-	public function delete(){
+	public function delete()
+	{
 		$data = array();
 		if ($this->request->getMethod() == 'post') {
 			$serviceModel = new ServiceModel();
@@ -82,16 +93,15 @@ class Service extends BaseController
 
 			session()->setFlashdata('success', 'serviço excluido com sucesso.');
 			return redirect()->to('/');
-		}else{
+		} else {
 			return redirect()->to('/');
 		}
-
 	}
 
 	public function updateService($id)
 	{
 		$data = array();
-		
+
 		helper(['form']);
 
 		if ($this->request->getMethod() == 'post') {
@@ -142,8 +152,8 @@ class Service extends BaseController
 		}
 		$serviceModel = new ServiceViewModel();
 		$data['service'] = $serviceModel->find($id);
-		
-		if( intval($data['service']['id_user']) !== intval(session()->get('user_id')) ) return redirect()->to('/');
+
+		if (intval($data['service']['id_user']) !== intval(session()->get('user_id'))) return redirect()->to('/');
 
 		$data['validation'] = $this->validator;
 		echo view('templates/header');
@@ -152,7 +162,8 @@ class Service extends BaseController
 	}
 
 
-	public function myServices(){
+	public function myServices()
+	{
 		$data = array();
 		$serviceModel = new ServiceViewModel();
 

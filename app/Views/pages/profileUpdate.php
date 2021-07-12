@@ -1,6 +1,7 @@
 <!-- tag required for menu alignment -->
 <div class="content">
-    <div class="row login-container">
+    <div class="row">
+        <div class="col"></div>
         <div class="col-5">
             <div class="form-container">
 
@@ -26,7 +27,9 @@
                     </div>
                 </form>
             </div>
+
         </div>
+        <div class="col"></div>
     </div>
 
 </div>

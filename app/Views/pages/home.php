@@ -7,6 +7,12 @@
         <?=session()->getFlashdata('success')?>
     </div>
 <?php endif; ?>
+<?php if (session()->getFlashdata('fail')) : ?>
+    <div class="alert alert-danger" role="alert">
+        <?=session()->getFlashdata('fail')?>
+    </div>
+<?php endif; ?>
+
 
     <div class="text-center heading-title fancy-underline heading-bigger-nomargin left">
         <h1>Explore os serviços oferecidos em <span class="city">Teresina</span></h1>
