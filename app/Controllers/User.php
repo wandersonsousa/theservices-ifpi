@@ -21,7 +21,7 @@ class User extends BaseController
             $rules = [
                 "email" => "required|min_length[3]|max_length[50]|valid_email|is_unique[user.user_email]",
                 "name" => "required|min_length[2]|max_length[50]",
-                'cep' => 'required|min_length[12]|string',
+                'cep' => 'required|min_length[8]|string',
                 'is_premium' => 'permit_empty',
                 "password" => "required|min_length[4]|max_length[50]",
             ];
